@@ -1,0 +1,69 @@
+:root {
+	/* green */
+	--clr-1: #2eb086;
+	/* 	white */
+	--clr-2: #eee6ce;
+	/* 	red */
+	--clr-3: #b8405e;
+	--clr-blue-bg: #313552;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 100vh;
+	width: 100%;
+	color: var(--clr-2);
+	font-family: 'Ubuntu', sans-serif;
+	background-color: var(--clr-blue-bg);
+}
+
+.left {
+	display: grid;
+	place-items: center;
+}
+
+.triangle-grid {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	/* 	grid-auto-rows: 1fr; */
+}
+
+.triangle {
+	/* 	height: 0;
+	width: 0; */
+	clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.triangle--1 {
+	background-color: var(--clr-1);
+}
+
+.triangle--2 {
+	background-color: var(--clr-2);
+}
+
+.triangle--3 {
+	background-color: var(--clr-3);
+}
+
+.triangle--90 {
+	clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.triangle--180 {
+	clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+.triangle--270 {
+	clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+
+.triangle--full {
+	clip-path: none;
+}

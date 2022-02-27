@@ -1,0 +1,75 @@
+:root {
+	/* green */
+	--clr-1: #2eb086;
+	/* 	white */
+	--clr-2: #eee6ce;
+	/* 	red */
+	--clr-3: #b8405e;
+	--clr-blue-bg: #313552;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 100vh;
+	width: 100%;
+	color: var(--clr-2);
+	font-family: 'Ubuntu', sans-serif;
+	background-color: var(--clr-blue-bg);
+}
+
+.left {
+	display: grid;
+	place-items: center;
+}
+
+.triangle-grid {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.triangle {
+	height: 0;
+	width: 0;
+	border-top: 120px solid;
+	border-left: 120px solid transparent;
+}
+
+.triangle--1 {
+	border-top-color: var(--clr-1);
+}
+
+.triangle--2 {
+	border-top-color: var(--clr-2);
+}
+
+.triangle--3 {
+	border-top-color: var(--clr-3);
+}
+
+.triangle--90 {
+	transform: rotate(90deg);
+}
+
+.triangle--180 {
+	transform: rotate(180deg);
+}
+.triangle--270 {
+	transform: rotate(270deg);
+}
+
+.triangle--3.triangle--full {
+	border-left-color: var(--clr-3);
+}
+.triangle--1.triangle--full {
+	border-left-color: var(--clr-1);
+}
+.triangle--2.triangle--full {
+	border-left-color: var(--clr-2);
+}
